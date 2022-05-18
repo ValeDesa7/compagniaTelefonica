@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "bec667d5-4526-4c61-b4e2-57f042860d84",
+		"name": "CompagniaTelefonica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clienti",
+			"item": [
+				{
+					"name": "lista clienti",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaClienti",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaClienti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserisci cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"\",\r\n    \"codiceFiscale\": \"\",\r\n    \"email\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/inserisciCliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"inserisciCliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifica cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"\",\r\n    \"codiceFiscale\": \"\",\r\n    \"email\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/modificaCliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"modificaCliente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/eliminaCliente/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"eliminaCliente",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "linee",
+			"item": [
+				{
+					"name": "lista linee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaLinee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaLinee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserisci linea",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": \"\",\r\n    \"tipo\": \"\",\r\n    \"stato\": \"\",\r\n    \"cliente\": {\r\n        \"idCliente\": ,\r\n        \"nome\": \"\",\r\n        \"codiceFiscale\": \"\",\r\n        \"email\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/inserisciLinea",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"inserisciLinea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifica linea",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numero\": ,\r\n    \"tipo\": \"\",\r\n    \"stato\": \"\",\r\n    \"cliente\": {\r\n        \"idCliente\": ,\r\n        \"nome\": \"\",\r\n        \"codiceFiscale\": \"\",\r\n        \"email\": \"\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/modificaLinea/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"modificaLinea",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifica stato linea",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stato\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/modificaStatoLinea/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"modificaStatoLinea",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina linea",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/eliminaLinea/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"eliminaLinea",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chiamate",
+			"item": [
+				{
+					"name": "lista chiamate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaChiamate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaChiamate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista chiamate numero",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaChiamateNumero/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaChiamateNumero",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista chiamate data inizio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaChiamateDataInizio/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaChiamateDataInizio",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista chiamate data fine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaChiamateDataFine/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaChiamateDataFine",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista chiamate durata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/listaChiamateDurata/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"listaChiamateDurata",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista chiamate numero sum durata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/sumDurataChiamateNumeroData///",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"sumDurataChiamateNumeroData",
+								"",
+								"",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserisci chiamata",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataInizio\": \"\",\r\n    \"dataFine\": \"\",\r\n    \"linea\": {\r\n        \"idLinea\": ,\r\n        \"numero\": ,\r\n        \"tipo\": \"\",\r\n        \"stato\": \"\",\r\n        \"cliente\": {\r\n            \"idCliente\": ,\r\n            \"nome\": \"\",\r\n            \"codiceFiscale\": \"\",\r\n            \"email\": \"\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/inserisciChiamata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"inserisciChiamata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modifica chiamata",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataInizio\": \"\",\r\n    \"dataFine\": \"\",\r\n    \"linea\": {\r\n        \"idLinea\": ,\r\n        \"numero\": ,\r\n        \"tipo\": \"\",\r\n        \"stato\": \"\",\r\n        \"cliente\": {\r\n            \"idCliente\": ,\r\n            \"nome\": \"\",\r\n            \"codiceFiscale\": \"\",\r\n            \"email\": \"\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/modificaChiamata/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"modificaChiamata",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina chiamata",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/eliminaChiamata/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"eliminaChiamata",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
